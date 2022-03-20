@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/7a7c67eab3.js"
       crossorigin="anonymous"
@@ -15,17 +15,7 @@
   <body>
     <section class="container">
       <header class="header">Shoppin List</header>
-      <ul class="items">
-        <li class="item__row">
-          <div class="item">
-            <span class="item__name">우유</span>
-            <button class="item__delete">
-              <i class="fas fa-trash-alt"></i>
-            </button>
-          </div>
-          <div class="item__divider"></div>
-        </li>
-      </ul>
+      <ul class="items"></ul>
       <footer class="footer">
         <input type="text" class="footer__input" />
         <button class="footer__button"><i class="fas fa-plus"></i></button>
