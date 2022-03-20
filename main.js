@@ -1,18 +1,24 @@
 "use strict";
 
 const items = document.querySelector(".items");
+const form = document.querySelector(".new-form");
 const input = document.querySelector(".footer__input");
 const addBtn = document.querySelector(".footer__button");
 
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    onAdd();
-  }
-});
-
-addBtn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   onAdd();
 });
+
+// input.addEventListener("keydown", (e) => {
+//   if (e.key === "Enter") {
+//     onAdd();
+//   }
+// });
+
+// addBtn.addEventListener("click", (e) => {
+//   onAdd();
+// });
 
 function onAdd() {
   const inputValue = input.value;
@@ -42,7 +48,6 @@ function createItemRow(text) {
   itemDelete.setAttribute("class", "item__delete");
   itemDelete.innerHTML = '<i class="fas fa-trash-alt"></i>';
   itemDelete.addEventListener("click", (e) => {
-    console.log("delete");
     items.removeChild(itemRow);
   });
 
