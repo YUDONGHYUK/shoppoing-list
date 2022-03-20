@@ -4,6 +4,19 @@ const items = document.querySelector(".items");
 const input = document.querySelector(".footer__input");
 const addBtn = document.querySelector(".footer__button");
 
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const inputValue = input.value;
+    const item = createItemRow(inputValue);
+    if (inputValue == "") {
+      input.focus();
+      return;
+    }
+    items.appendChild(item);
+    input.value = "";
+    input.focus();
+  }
+});
 addBtn.addEventListener("click", (e) => {
   const inputValue = input.value;
   const item = createItemRow(inputValue);
