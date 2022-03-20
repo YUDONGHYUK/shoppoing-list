@@ -6,18 +6,15 @@ const addBtn = document.querySelector(".footer__button");
 
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    const inputValue = input.value;
-    const item = createItemRow(inputValue);
-    if (inputValue == "") {
-      input.focus();
-      return;
-    }
-    items.appendChild(item);
-    input.value = "";
-    input.focus();
+    onAdd();
   }
 });
+
 addBtn.addEventListener("click", (e) => {
+  onAdd();
+});
+
+function onAdd() {
   const inputValue = input.value;
   const item = createItemRow(inputValue);
   if (inputValue == "") {
@@ -27,7 +24,7 @@ addBtn.addEventListener("click", (e) => {
   items.appendChild(item);
   input.value = "";
   input.focus();
-});
+}
 
 function createItemRow(text) {
   const itemRow = document.createElement("li");
