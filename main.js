@@ -22,6 +22,7 @@ function onAdd() {
     return;
   }
   items.appendChild(item);
+  item.scrollIntoView({ behavior: "smooth", block: "end" });
   input.value = "";
   input.focus();
 }
