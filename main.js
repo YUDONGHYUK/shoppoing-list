@@ -7,6 +7,10 @@ const addBtn = document.querySelector(".footer__button");
 addBtn.addEventListener("click", (e) => {
   const inputValue = input.value;
   const item = createItemRow(inputValue);
+  if (inputValue == "") {
+    input.focus();
+    return;
+  }
   items.appendChild(item);
   input.value = "";
   input.focus();
