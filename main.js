@@ -4,7 +4,7 @@ const items = document.querySelector(".items");
 const input = document.querySelector(".footer__input");
 const addBtn = document.querySelector(".footer__button");
 
-input.addEventListener("keypress", (e) => {
+input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     onAdd();
   }
